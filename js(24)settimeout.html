@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settimeout</title>
+        <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+    </head>
+    <body>
+
+        <div>
+            <h1 id="greeting">Welcome to our site</h1>
+        </div>
+        
+        <div>   
+            <button type="button" id="startalert" class="" onclick="startbtn()">Start Alert</button>   
+            <button type="button" id="stopalert" class="" onclick="stopbtn()">Stop Alert</button>  
+        </div>
+
+        <hr/>
+
+        <div>
+            <form action="" method="">
+                <input type="text" name="url" id="url" class=""/>
+                <input type="button" id="urlbtn" class="" value="Go URL" onclick="gourl()"/>
+            </form>
+        </div>
+        <script type="text/javascript">
+
+            // For Greeting
+
+            // window.setInterval(newmessage,2000);
+            window.setTimeout(newmessage,3000);
+
+            function newmessage(){
+                document.getElementById('greeting').textContent = 'See you later ....';
+            }
+
+            // For Alert
+
+            function mypopup(){
+                window.alert('Welcome Sir...');
+            }
+
+            function startbtn(){
+                // console.log('i am working');
+
+                mypopup();
+
+                mytimer = window.setTimeout(startbtn,2000);
+
+            }
+            
+            function stopbtn(){
+                // console.log('i am working')
+
+                window.clearInterval(mytimer)
+            }
+            
+            //For Url
+
+            function gourl(){
+                // console.log('hay');
+                const geturl = document.getElementById('url').value;
+                // console.log(geturl);
+
+                window.location = 'https://'+geturl;
+            }
+            
+
+            function favurl(){
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function</title>
+        <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+
+        <style type="text/css">
+            *{
+                box-sizing:border-box;
+            }
+
+            .box{
+                width:300px;
+                height:200px;
+                background: color #f4f4f4;
+                box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+            }
+
+            label{
+                display:block;
+                margin-bottom:5px;
+            }
+            
+            .form-control{
+                width:100%;
+                display:block;
+                padding:5px;
+                margin-bottom:5px;
+            }
+
+            .btn{
+                width:100%;
+                font-size:16px;
+                background-color:darkblue;
+                color:#fff;
+                border:none;
+                padding:5px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="box">
+            <h3>Get Name = <span id="fullname">Test</span></h3>
+
+            <!-- <form action="" method=""> -->
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control">
+                                    <!-- imput ထဲကdataတွေယူချင်ရင် - onclick="getdata() -->
+                <button class="btn" onclick="getdata()">Get Name</button>
+            <!-- </form> -->
+        </div>
+
+        <hr/>
+
+        <script type="text/javascript">
+            
+            // Function
+
+            // function name(){
+            //     code to be excuded
+            // }
+
+            // name();*နာမည်ကိုရိုးရိုးရင်းရင်းအသေးတွေဘဲပေးမယ်
+
+            // console.log("Hello Myanmar");
+
+            // 1.Manual Function
+
+            function greet(){
+                console.log("Hello Myanmar");
+                console.log("Hello Thailand");
+                console.log("Hello Indonesia");
+            }
+
+            greet();
+            greet();
+
+            // function hello(){
+            //     console.log("Hello Yangon");
+            // }
+            
+            // hello();
+
+            
+            // console.log(hello);
+            
+            // function hello(){
+            //     window.alert("Hello Yangon");
+            //     window.alert("Hello Mandalay");
+            //     window.alert("Hello Bago");
+            // }
+
+            // hello();
+
+            
+            // function hello(){
+            //     document.write("Hello Yangon");
+            //     document.write("Hello Mandalay");
+            //     document.write("Hello Bago");
+            //     document.write("<hr/>");
+            // }
+
+            // hello();
+
+            // ________________
+            function funone(){
+                console.log("i am function one");
+            }
+
+            function funtwo(){
+
+                console.log("i am function two");
+
+                funone();/*အပေါ်ကfunction one ကိုပြန်ခေါ်တာ*/
+                
+                funthree();/*Function အောက်မှာcrate လုပ်ထားလဲ ခေါ်သုံးလို့ရတယ်*/
+            }
+
+            function funthree(){
+                console.log("i am function three")
+            }
+
+            funtwo();
+            // ________________
+
+            // RETURn
+
+            function funfour(){
+                console.log("i am 4");
+            }
+            
+            function funfive(){
+                console.log("i am 5");
+            }
+            
+            function funsix(){
+                funfour();
+                funfive();
+                console.log("i am 6");
+
+                const num1 = funfour();
+                const num2 = funfive();
+                console.log(num1);
+                console.log(num2);
+                const total = num1+num2;
+                console.log(total); // result = NaN ( Not a Number )
+            }
+
+            funsix();
+
+            // ________________
+
+            // const num9 = 9;
+            // console.log(num9);
+
+            // Note : 1 function 1 return ( first in first out . which mean return can't overwrite )
+            //* အရင်ဦးဆုံးတွေ့တဲ့ ကောင်ဘဲ return ပြန်တယ်
+            function funseven(){
+                return 7;
+            }
+
+            // console.log(funseven());
+
+            function funeight(){
+                return 8;
+            }
+
+            // console.log(funeight());
+            // document.write(funeight());
+            // window.alert(funeight());
+
+            function funnine(){
+                const num1 = funseven();
+                const num2 = funeight();
+
+                // console.log(num1);
+                // console.log(num2);
+
+                const total = num1+num2
+                // console.log(total);
+
+                return total;
+            }
+
+            funnine();
+
+            console.log(funnine());
+
+            // console.log(num1); (*function မှာကြေငြာထားတဲ့variable တွေက အပြင်မှာပြန်ခေါ်သုံးလို့မရဝူး [scope မတူလို့])
+            // ________________
+
+
+            //  2. Perameter function
+
+            // 1. Single perameter function
+
+            function myfun1(city){
+                // console.log("Hello " + city);
+                console.log(`Hello ${city}`);
+            }
+
+            myfun1("Yangon"); /*ဒီကထည့်တဲ့value က city ထဲဝင်သွားမယ်*/
+            myfun1("Mandalay");
+            myfun1();
+
+            // console.log(city); (* result = undefine)
+
+            // Default Perameter function 
+            // Perameter ကို Default သွားပေးတာ
+            function myfun2(city="Bago"){
+                console.log("Hello " + city);
+            }
+
+            myfun2("Yangon");
+            myfun2("Mandalay");
+            myfun2();
+
+            // ________________
+
+            // 2. Multi perameter function
+
+            function multifun1(x=1,y=2,z=3){
+                // console.log(`x value is ${x} , y value is ${y} , z value is ${z}`);
+
+                let result = x + y + z
+                return result;
+            }
+
+            multifun1(10);/*x*/
+            multifun1(10,20);/*x,y*/
+            multifun1(10,20,30);/*x,y,z*/
+
+            console.log(multifun1(20,40,60));/*result = 120*/
+
+            console.log(multifun1(10,20)) /*10+20+3 = 33*/
+
+                            // variabe ကြေငြာလိုက်ရင် nameing ကအလုပ်မလုပ်တော့ဝူး
+            // let mytestfun = function mytest(){
+            //     console.log("hello i am test function")
+            // }
+
+            // mytest();
+           
+                // nameing က variable naming ဖြစ်သွားတယ်
+            let mytestfun = function(){
+                console.log("hello i am test function");
+            }
+
+            mytestfun();
+
+
+            // ________________
+
+            // 3. Constructor Function (By String)
+            // String အနေနဲ့ဘဲရှိရမယ် / return ဘဲပြန်လို့ရမယ် / တစ်ကြောင်းဘဲရေးလို့ရမယ်
+            // new 
+            const confunone = new Function("j","k","l","return j+k+l");
+            
+                                // j, k, l
+            console.log(confunone(10,20,30));// result = 60
+            console.log(typeof confunone(10,20,30));//result = number
+
+            console.log(confunone("10","20","30"));// result = 102030
+            console.log(typeof confunone("10","20","30"));// result - string
+            
+            console.log(confunone("aung aung ","maung maung ","kyaw kyaw"));
+
+
+            // ________________
+            // 4. Nameless function (Anonymous Function)
+
+            let annfuone = function(name,color){
+                document.write(`My name is ${name}. I love ${color} color `);
+            } 
+
+            annfuone("aung aung","black");
+            // ________________
+
+            //  5. Self Invoking Function  ()
+
+            // ->(funtion က round bracket ထဲမှာရှိရမယ်) <- 
+            (function(){
+                console.log("Save myanmar")
+            })(); //<- () က invokeလှမ်းလုပ်တာ
+
+            (function(name){
+                console.log(`My Name is ${name}`)
+            })("kyaw kyaw");
+
+            // ________________
+
+            function getdata(){
+                // console.log("hay i am working")
+
+                let getname = document.getElementById("name").value;
+                // console.log(getname)
+
+                // let getfullname =  document.getElementById("fullname");
+                // console.log(getfullname);
+                // getfullname.innerText = getname;
+
+                
+                //      < > အထဲထဲကစာကိုချိန်းချင်ရင် .innerText / .textContent / .innerHTML </ >
+                // document.getElementById("fullname").innerText =  getname;
+                // document.getElementById("fullname").textContent =  getname;
+                document.getElementById("fullname").innerHTML =  getname;
+            }
+            
+        </script>
+    </body>
+</html>
+
+<!-- 
+Functionname();
+
+ -->

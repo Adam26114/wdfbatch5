@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Math Object</title>
+		<link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			// Mah Object
+			let val;
+
+			// Math.round();
+			//5နဲ့ ညီပီး5ထက်ကျော်သွားရင် 1တိုးသွားမယ်
+			val = Math.round(2.8);//Result 3
+			val = Math.round(2.4);//Result 2
+
+			// Math.ceil();
+			//0.1စွန်းတာနဲ့1တိုးသွားတယ်
+			val = Math.ceil(2.8);//Result 3
+			val = Math.ceil(2.1);//Result 3
+
+			// Math.floor();
+			// .9ဘဲရှိရှိ 1တိုးမယူဝူး
+			val = Math.floor(2.9);//Result 2
+			val = Math.floor(2.1);//Result 2
+
+			//Math.sqrt()
+			val = Math.sqrt(64);//square root = Result = 8
+
+			// Math.pow()
+			val = Math.pow(7,2);//pow(base,power) = Resultt 49
+
+			//Math.abs();
+			//ပကတိတန်ဖိုး ကိန်းပြည့်ကိုဘဲ ယူတာ
+			val = Math.abs(100);//absololute = Result 100
+			val = Math.abs(-100);//absololute = Result 100
+
+			//Math.min();
+			val = Math.min(8,2,5,1,7,20);//min number = Result 1
+
+			//Math.mix();
+			val = Math.max(8,2,5,1,7,20);//max number = Result 20
+
+
+			//Math.random();
+			val = Math.random();
+
+			val = Math.floor(Math.random() * 100);
+
+
+			console.log(val);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Template String</title>
+		<link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+	</head>
+	<body>
+		
+
+
+
+
+
+		<script type="text/javascript">
+			
+
+			const	name = "kyaw kyaw", 
+					age = 24,
+					city = "MAndalay",
+					job = "Developer";
+
+					console.log(name);
+
+					// console.log(age);
+
+					let abc;
+
+		// without template string 
+
+		/*abc = '<ul><li>Name: '+name+'</li><li>Age :'+age+'</li><li>City = '+city+'</li><li>Job :'+job+'</li></ul>';*/
+
+		abc = '<ul>'+
+		'<li>Name: '+name+'</li>'+
+		'<li>Age:'+age+'</li>'+
+		'<li>City:'+city+'</li>'+
+		'<li>Job:'+job+'</li>'
+		'</ul>';
+
+		document.write(abc);
+
+		 // with Template String
+
+		 abc = `
+		 	<ul>
+		 		<li> Name : ${name}</li>
+		 		<li> Age : ${age}<li/>
+		 		<li>City : ${city}</li>
+		 		<li>Job : ${job}</li>
+		 	</ul>
+		 `
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js String Method</title>
+		<link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+
+		<style class="text/css">
+			/* #mm{
+				color:red;
+				font-size:50px;
+			}
+
+			#th{
+				font-family:Arial;
+			} */
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			<h1 id="mm">Myanmar</h1>
+			<h1 id="th">Thiland</h1>
+		</div>
+
+		<script type="text/javascript">
+
+			//String Method
+
+			let val = "Maung Maung ";
+			let lv = "Kyaw";
+
+			console.log(val)
+			console.log(val.length);//စာလုံးဘယ်နစ်လုံးရှိလဲ ရေတွက်တာ
+
+			let nm = val + lv
+			console.log(nm);
+
+			val += lv
+			console.log(val);
+
+			// concat();
+
+			var firstname = "Zayar ";
+			var lastname = "Kyaw";
+			var fullname = firstname.concat(lastname);
+
+			console.log(fullname);
+
+
+			// String is Character Array in js
+			console.log(fullname[3]);
+			// console.log(fullname.length-1);
+			console.log(fullname[fullname.length-1]);
+
+
+			// charAt();
+
+			console.log(fullname.charAt(0));
+			console.log(fullname.charAt(fullname.length-1));
+
+			// includes();
+			let fav = "My fav color is black";
+			//true
+			console.log(fav.includes("black"));
+			// false
+			// console.log(fav.inclues("blue"));
+			// true
+			// console.log(fav.includes("bla"));
+			// false
+			// console.log(fav.includes("BLACK"));
+			console.log(fav.includes("Black"));
+
+
+			// replace(old,new)
+			console.log(fav.replace("black","blue"));
+			// result = blueck
+			console.log(fav.replace("bla","blue"));
+			// result = My fav parapr is blcak color
+			console.log(fav.replace("colo","parpar"));
+
+			// substring(index,length);
+			console.log(fav.substring(0,5)+"...");
+			console.log(fav.substring(0,5).concat('...'));
+
+			// Change Case 
+			console.log(fav.toUpperCase());
+			console.log(fav.toLowerCase());
+
+			//Usefull Style
+			document.getElementById("mm").style.color = "green";
+			document.getElementById("th").style.color = "blue";
+			document.getElementById('th').style.fontSize = "50px";//js မှာမတူညီတဲ့meaningfull ဖြစ်တဲ့စကားလုံးတွေဆိုရင် ရှေ့စာလုံးအကြီးနဲ့ရေးရတယ်
+			document.getElementById('th').style.fontFamily = "Arial";
+			// document.getElementById('th').style.display = "none";
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Function</title>
+    <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+        // Regular function (manual function - withour parameter)
+
+        let regfun = function (){
+            return " I love Mandalay";
+        };
+
+        console.log("this is reg function with out perameter" + regfun());
+        
+        // ________________________
+
+        // Arrow function
+        // Arrow function က naming မရှိလို့ သူကို name သွား‌‌ပေးရတယ် variable နဲ့
+
+        // Arrow function နဲ့ ရေးမယ်ဆိူရင် ()=> နဲ့ရေးရမယ်
+        // 1. without perameter
+
+        // Method 1
+        let arrfunone = ()=>{
+            return "Hello i am arrfunone"
+        };
+        
+        console.log("this is  arr function without parameter = " + arrfunone());
+        
+        // Method 2
+        
+        // အမြန်‌ရေးချင်ရင် 
+        let arrfuntwo = ()=>"Hello i am arrfuntwo";
+        
+        console.log("this is arr function without perameter = " + arrfuntwo());
+        
+        
+        // Method 3
+        // (round breaket နဲ့လဲရေးလိူ့ရတယ်)
+        let arrfunthree = ()=>("Hello i am arrfunthree");
+        console.log("this is arr function without perameter = " + arrfunthree());
+
+        //ii . perameter function
+            //arr single perameter
+        let arrsiglefun = function(num1){
+            return num1 + 10;
+        }
+
+        let regsinglefun = function(num1){
+            return num1+10;
+        }
+        console.log("this is reg function with single parameter = " + regsinglefun(20));
+
+        let regmultifun = function(num1,num2){
+            return num1+num2;
+        }
+        console.log("this is reg function with multi parameter = " + regmultifun(10,20));
+        
+        //arr function 
+            // arr single perameter
+            let arrsinglefun1 = (num1)=>{
+                return num1 + 10;
+            }
+            
+            console.log("this is arrfunction with single parameter = " + arrsinglefun1(10));
+            
+            let arrsinglefun2 = num1=>{
+                return num1 + 10;
+            }
+            
+            console.log("this is arrfunction with single parameter = " + arrsinglefun2(20));
+            
+            let arrsinglefun3 = num1=>num1+30;
+            console.log("this is arr function with single parameter =" + arrsinglefun3(30))
+            
+            // arr multi perameter
+            let arrmultifun1 = (num1,num2)=>{
+                return num1 + num2
+            } 
+            console.log("this is arr function with multi parameter =" + arrmultifun1(100,200))
+            
+                                // default value သွားပေးထာတာ value မပေးထားရင် default valueဝင်သွားမှာ
+            let arrmultifun2 = (num1=10,num2=20)=>{
+                return num1 + num2;
+            } 
+            console.log("this is arr function with multi parameter =" + arrmultifun2(10,10))
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+Git Note
+========
+
+
+git --version
+git
+
+keygen ထုတ်နည်း(1ခါတည်းထုတ်ရင်ရပီ)
+==============
+ssh-keygen
+enter
+enter
+enter
+
+-------------------------------------------------------------------
+
+(II)ssh ချိတ်တာအဆင်ပြေလားစစ်နည်း
+==============================
+ssh -T git@github.com
+**(1ခါတည်းထုတ်ရင်ရပီ)**
+git config --global user.name "Adam26114"
+git config --global user.email "zakato26114@gmail.com"
+
+
+User / Email ပြန်စစ်နည်း
+=====================
+git config user.name
+git config user.email
+
+User / Email ပြန် edit နည်း
+=========================
+git config --global user.name "edit"
+git config --global user.email "edit"
+
+-------------------------------------------------------------------
+
+(I)git install လုပ်နည်း or git folder တည်ဆောက်နည်း
+=================================================
+git init
+
+-------------------------------------------------------------------
+
+(III)ssh နဲ့ git နဲ့တည်ဆောက်နည်း
+=============================
+git remote add origin git@github.com:Adam26114/pttsoftware.git
+git remote add origin git@github.com:Adam26114/cssanimationbatch3.git
+git remote add origin git@github.com:Adam26114/wdfbatch5.git
+
+ဘယ် repository နဲ့ချိတ်ထားလဲဆိုတာစစ်နည်း
+====================================
+git remote -v
+
+-------------------------------------------------------------------
+(IV)Github ပေါ်တင်ရန်
+==================
+စစ်နည်း
+=====
+git status  (အနီရောင် - git ထဲမှာသွားမသိမ်းရသေးဝူး)
+            (အစိမ်းရောင် - git ထဲမှာသိမ်းပီပီ)
+
+
+git ထဲမှာသွားသိမ်းနည်း
+==================
+git add -A
+git status
+
+(git မှတစ်ဆင့် github ပေါ်တင်မှာ)
+(သွားတင်ရင် commit လေးတွေနဲ့ တင်ရမှာ)
+
+
+commit ရေးနည်း
+=============
+git commit -m "27 may 2022"
+
+git -> github ပေါ်တင်
+==============
+git push -u origin master
+
+(
+branchname
+
+)

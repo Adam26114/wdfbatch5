@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Array</title>
+		<link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+	</head>
+	<body>
+		
+
+
+		<script type="text/javascript">
+
+			let obj = {
+				person1 : "aung aung",
+				person2 : "maung maung",
+				person3 : "kyaw kyaw",
+			};
+			console.log(obj);
+			console.table(obj);
+			console.warn(obj.person1);
+
+				// Array (Manural Array)
+			let j = new Array ("aung aung","maung maung","kyaw kyaw","zaw zaw");//Array ရေးနည်းအဟောင်း
+			console.log(j);
+			console.table(j);
+			console.log(j[1]);//Arrayကိုဆွဲထုတ်မယ်ဆိုရင်[ထောင့်ကွင်းနဲ့ဆွဲထုတ်ရမယ်]
+			console.log(j[2]);
+			console.error(j[3]);
+
+			console.log(typeof j);
+
+			console.log(j.length);//.length က အဲ့ array ထဲမှာ valueဘယ်နစ်ခုရှိလဲ သိချင်ရင်ခေါ်သုံးတာ(array method လိူခေါ်တယ်)
+
+			let arr = ["su su","mya mya","hla hla",'ma ma'];//Array ရေးနည်းအသစ်
+			console.log(arr);
+			console.log(arr[2]);
+			//undefined
+			console.log(arr[5]);
+			console.log(arr.length);
+
+			let x  = [1200,1300,1400,1500];
+			console.log(x[2]);
+			console.log(x.length);
+
+
+			let k  = [20,"Hello","World",true,undefined,null,new Date(),{a:1,b:2}];
+
+			console.log(k);
+			console.log(k.length);
+			console.log(k[0]);
+			console.log(k[4]);
+			console.log(k[6]);
+			console.log(k[7]);
+			console.log(k[7].a);
+			console.log(k[7].b);
+
+
+			let l = [1200,1300,"1400",1500];
+
+			console.log(typeof 1);
+			console.log(typeof 1[2]);
+			console.log(typeof 1[3]);
+
+			console.log(l.indexOf(1500));
+
+			// if no result = -1
+			//မရှိတဲ့ နာမည်တွေဆို -1ပြမယ်
+			console.log(l.indexOf(1400));
+			console.log(l.indexOf(130));
+
+			// String is Charactor Array in js
+			const name = "aung ko ko";
+			console.log(name);
+			console.log(name.length);//Space တွေပါ တွက်သွားတာ
+			console.log(name[3]);
+
+			console.log(name.indexOf("k"));
+
+
+			let m =[];
+			m[2] = "blue";
+			m[0] = "green";
+			m[1] = "red";
+			m[3] = "black";
+			m[5] = "violet";
+
+			console.log(m);
+			// console.table(m);
+			console.log(m[1]);
+
+			const city = "yangon";
+
+			// it's not array or not
+			// if arrat = true
+			console.log(Array.isArray(m));
+
+			// if ist's not array = false
+			console.log(Array.isArray(city));
+
+			console.log(m);
+			console.log(typeof m);
+
+			// Array Datatype to String Data type
+			// console.log(m.toString());
+			// console.log(typeof m.toString());
+
+			console.log(m.join("/"));
+			console.log(typeof m.join("/"));
+
+			console.log(m);
+
+
+			const n = ["green","black","green","silver"];
+
+			n[4] = "blue";
+			console.log(n);
+
+			// push ကအနောက်ကနေ value ဝင်တာ
+			n.push("gold");
+			n.push("pink");
+			n.push("violet","white");
+			console.log(n);
+			console.error(n.length)
+			console.log(0);
+
+			// shift remove for front
+			// remove value & indexnumber(take off from Front)
+			n.shift();
+			console.log(n);
+			console.log(n.length);
+			console.log(n[0]);
+
+			
+			// remove only value 
+			delete n[2];
+			console.log(n);
+			console.log(n.length);
+
+			// unshift ကvalue ကအရှည့်ကနေဝင်တာ
+			// Add new value to array (add on to front )
+			n.unshift("tomato");
+			n.unshift("black");
+			console.log(n);
+			console.log(n.length)
+			
+			//Remove value & indexnumber (take off from end)
+			n.pop();
+			n.pop();
+			console.log(n);
+			console.log(n.length);
+
+				// where we want to start , where we want to end
+					// index,space(length)
+			let q = n.splice(1,3);
+			console.log(q);
+
+
+			const arr1 = ["aung aung","maung maung","kyaw kyaw"]
+			const arr2 = ["su su","nu nu","mya mya"];
+			const arr3 = [100,200,300];
+
+			console.log(arr1.concat(arr2));
+			console.log(arr2.concat(arr1));
+			console.log(arr2.concat(arr3));
+
+
+			// Array sorting စီချင်ရင်(just for string)
+			const arr4 = arr1.concat(arr2);
+
+			console.log(arr4.sort());
+			console.log(arr4.reverse());//ပြောင်းပြန် လှန်ပေးတာ
+
+			//Jut reverse ( sort () doesn't work in number)
+			const arr5 = [700,200,100,50,150,10,600];
+			console.log(arr5.reverse());
+
+
+			// a to z  ဆင်တာ
+			// console.log(arr5.sort(function(a,z){
+			// 	return a-z;
+			// }));
+
+			// z to a  ဆင်တာ
+			console.log(arr5.sort((x,y)=>{
+				return y-x;
+			}));
+
+			// _________________________
+
+			const funone = function(){
+				console.log("i am fun one");
+			}
+
+			const funtwo = function(){
+				console.log("i am fun two");
+			}
+			
+			const funthree = function(){
+				console.log("i am fun three");
+			}
+
+			let arrfuns = [];
+
+			arrfuns.push(funone);
+			arrfuns.push(funtwo);
+			arrfuns.push(funthree);
+			arrfuns.push(funone);
+			
+			console.log(arrfuns);
+
+			const output = arrfuns.filter(function(arrfun){
+				// console.log(arrfun);
+
+				// if(arrfun === funtwo){
+				// 	return arrfun;
+				// }
+
+				// funtwo နဲ့မညီခဲ့ဝူးဆိုရင်
+				if(arrfun !==funtwo){
+					return arrfun;
+				}
+			});
+
+			console.log(output);
+
+		</script>
+	</body>
+</html>
+
+<!-- 
+shift - အနောက်ကနေ ဖျက်မယ်( value & index number)
+delete - value only ဖျက်မယ်
+pop - အရှေ့ကနေ ဖျက်မယ်( value & index number)
+
+push - အနောက်ကနေ value ထည့်မယ်
+unshift - အရှေ့ကနေ value ထည့်မယ်
+ -->

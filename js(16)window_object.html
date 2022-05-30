@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object</title>
+        <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+
+        <style type="text/css">
+
+            @media print{
+                
+                /* အကုန်လုံးကိုဖြောက်ထားမယ် */
+                *{
+                    visibility:hidden;
+                }
+                
+                /* * ထဲကမှ printarea ကိုဘဲဖော်မယ် */
+                #printarea *{
+                    visibility:visible;
+                }
+
+            }
+
+            @page {
+                /* size:portrait; */
+                /* size:landscape; */
+                size:auto;
+                
+                margin:0;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        
+        <button onclick="printme()">Print</button>
+        <button onclick="refresh()">Refresh</button>
+
+        <hr/>
+        
+        <div id="printarea">
+            <div>
+                <h1>This is Paragraph 1</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
+            <div>
+                <h1>This is Paragraph 2</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
+        </div>
+      
+        <div>
+            <h1>This is Paragraph 3</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+
+        <!-- <pre>lorLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</pre> -->
+
+        <hr/>
+
+        <!-- scroll ဆွဲဖို့height လိုချင်လို့ -->
+        <!-- <div style="margin-top:1000px;"></div> -->
+        
+        <script type='text/javascript'>
+        
+            // Window Object
+
+            // Alert 
+            // window.alert('Hello World')
+
+            //Prompt
+            // const input = prompt('write Something')
+            // console.log(input);
+
+            // Confirm
+            // if(confirm('Are you sure')){
+            //     console.log('Yes,I want to delete');
+            // }else{
+            //     console.log('Ohh sorry i don\'t ');
+            // }
+            
+            // Print
+            // window.print();
+
+            function printme(){
+                // console.log('hay')
+                window.print();
+            }
+
+            // ______________________________
+
+            let val;
+
+            // Outer Width With and height
+            val = window.outerWidth;
+            console.log('this is outer width = ' + val);
+            val = window.outerHeight;
+            console.log('this is outer width = ' + val);
+            
+            // _____________
+            
+            // Inner Width With and height
+
+            //inner က scole နဲ့ console အတွင်းက screen width နဲ့ height ကို count တာ
+            val = window.innerWidth;
+            console.log('this is outer width = ' + val);
+            val = window.innerHeight;
+            console.log('this is outer width = ' + val);
+
+            // ______________________________
+            
+            // Scroll Points
+            
+            val = window.scrollY;
+            console.log(val);
+            
+            val = window.scrollX;
+            console.log(val);
+            
+            // ______________________________
+            
+            // Redirect 
+            //ဒီစာမျက်နာကိုဖွင်တိုင်းတစ်ခြားစာမျက်နာကို‌‌ေရာက်စေချင်သုံးတယ်
+            // window.location.href = "https://google.com";
+            
+            // ______________________________
+
+            // Reload
+            // window.location.reload();
+
+            function refresh(){
+                //console.log('hey');
+
+                window.location.reload();
+            }
+
+            // ______________________________
+
+            // Navigator Object
+            // console.log(window.location);
+            console.log(window.navigator);
+
+            document.write('navigator.userAgent result ='+window.navigator.userAgent+'<br/>');
+            // cookies ဖွင့်ထားလားမဖွင့်ထားဝူးလားစစ်တာ
+            document.write('navigator.cookieEnabled result ='+window.navigator.cookieEnabled+'<br/>');
+            // ဘာlanguage နဲ့သုံးနေလဲမသိလို့
+            document.write('navigator.language result ='+window.navigator.language+'<br/>');
+            // online ဖြစ်နေလား offlineဖြစ်နေလားconditionစစ်လို့ရတယ်
+            document.write('navigator.onLine result ='+window.navigator.onLine+'<br/>');
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Window History</title>
+        <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png"/>
+        <style type="text/css">
+            body{
+                display:flex;
+                justify-content:center;
+            }
+
+            ul{
+                list-style:none;
+
+                padding: 0;
+                margin:0;
+
+                display:flex;
+            }
+
+            nav{
+                margin-bottom: 50px;
+            }
+
+            li{
+                width:200px;
+                background-color:green;
+                color: #fff;;
+
+                padding:20px 0;
+                text-align:center;
+                transition:all 0.2s;
+            }
+
+            li:hover{
+                background-color:orange;
+            }
+
+            .active{
+                background-color:orange;
+            }
+
+            .historybar{
+                background-color:silver;
+            }
+
+            .historybar span{
+                cursor:pointer;
+            }
+
+            div h1{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <nav>
+                <ul>
+                    <a href="js(18)windowhistory.html"><li>Home</li></a>
+                    <a href="js(18)windowhistorynews.html"><li class="active">News</li></a>
+                    <a href="js(18)windowhistoryebook.html"><li>Ebook</li></a>
+                    <a href="js(18)windowhistorymusic.html"><li>Music</li></a>
+                    <a href="js(18)windowhistoryvideo.html"><li>Video</li></a>
+                </ul>
+            </nav>
+
+            <div class="historybar"> 
+                <span onclick="gobackward()">Go Backward</span> / <span><a href="js(18)windowhistory.html">Home</a></span> / <span onclick="goforward()">Go forward</span>
+            </div>
+            <div>
+                <h1>I am News Page Sir</h1>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+            function gobackward(){
+                // console.log('backward is working');
+                window.history.go(-1);
+            }   
+
+            function goforward(){
+                // console.log('forward is working');
+                window.history.go(1);
+            }
+
+            // let val = window.history.length;
+            // console.log(val);
+        </script>
+
+    </body>
+</html>
